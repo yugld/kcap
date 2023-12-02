@@ -1,9 +1,16 @@
 export default function Leader() {
     return (
         <>
-            <div className="flex flex-col lg:flex-row-reverse lg:justify-between space-y-12 lg:gap-16">
-                <div className="w-full self-center space-y-8 mt-8 lg:w-1/2 ">
-                    <div className="text space-y-4">
+            <div className="flex flex-col lg:flex-row lg:justify-between space-y-12 lg:gap-16">
+                <div className="flex w-full lg:w-1/2">
+                    <img
+                        className="img h-full object-cover rounded-lg"
+                        src="src/assets/img/home/home4.jpg"
+                        alt=""
+                    ></img>
+                </div>
+                <div className="w-full lg:w-1/2 ">
+                    <div className="text space-y-4 self-center">
                         <h2 className="text-xl uppercase">
                             Лидер по производству
                         </h2>
@@ -21,13 +28,6 @@ export default function Leader() {
                             согласно стандарту ГОСТ и/или ТУ заказчика.
                         </p>
                     </div>
-                </div>
-                <div className="flex w-full -order-1 lg:w-1/2">
-                    <img
-                        className="img h-full object-cover rounded-lg"
-                        src="src/assets/img/home/home4.jpg"
-                        alt=""
-                    ></img>
                 </div>
             </div>
         </>

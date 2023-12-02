@@ -8,6 +8,7 @@ export default {
                 mask: "rgba(0, 0, 0, 0.2)",
                 hover: "#124F2E",
             },
+            visibility: ["hover", "focus"],
         },
     },
     plugins: [],

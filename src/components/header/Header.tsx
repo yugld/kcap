@@ -16,7 +16,7 @@ export const pages = [
     },
     {
         name: "Закупки",
-        path: "/",
+        path: "/purchase",
         id: 4,
     },
     {
