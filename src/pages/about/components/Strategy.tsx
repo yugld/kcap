@@ -25,7 +25,7 @@ export default function Strategy() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-x-16 ">
                 {points.map((point) => (
                     <p
-                        className="border-primary p-4  border-t border-l "
+                        className="border-primary p-4 border-t border-l rounded-tl-lg"
                         key={point.id}
                     >
                         {point.text}

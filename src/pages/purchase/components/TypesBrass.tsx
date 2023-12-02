@@ -37,7 +37,7 @@ export default function TypesBrass() {
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 sm:gap-x-16">
                     {types.map((type) => (
                         <div
-                            className="flex flex-col gap-2 text-center rounded-lg group overflow-hidden"
+                            className="flex flex-col gap-2 text-center rounded-lg group overflow-hidden bg-center bg-no-repeat bg-cover"
                             style={{ backgroundImage: `url(${type.img})` }}
                             key={type.id}
                         >

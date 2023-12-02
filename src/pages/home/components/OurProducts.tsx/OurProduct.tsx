@@ -5,7 +5,7 @@ export default function OurProducts() {
                 <div className="flex flex-col lg:flex-row-reverse lg:justify-between space-y-12 lg:gap-16 text-white">
                     <div className="flex flex-col w-full self-center lg:w-1/3 space-y-8 mt-8">
                         <p className="text-xl uppercase">
-                            Наша компания производит, по заказу потребителя,
+                            Наша компания производит по заказу потребителя
                             различные виды марок латуни ЛАЖМц, ЛКС, ЛСч, ЛС,
                             Лос, ЛМцС, ЛЦ
                         </p>
