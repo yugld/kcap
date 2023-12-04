@@ -1,3 +1,7 @@
+import { useEffect, useState } from "react";
+import OpenMenu from "./OpenMenu";
+import ClosedMenu from "./closedMenu";
+
 export const pages = [
     {
         name: "Главная",
@@ -21,85 +25,107 @@ export const pages = [
     },
     {
         name: "Вакансии",
-        path: "/",
+        path: "/vacancy",
         id: 5,
     },
 ];
 
 export default function Header() {
+    const [openMobileMenu, setOpenMobileMenu] = useState(false);
+    const [small, setSmall] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", () =>
+                setSmall(window.scrollY > 50)
+            );
+        }
+    }, []);
+
     return (
-        <>
-            <header className="fixed top-0 left-0 right-0 transition-all duration-500 w-full z-10 mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3">
-                <nav className="z-30 py-2.5">
-                    <div className="flex flex-wrap justify-between items-center mx-auto">
-                        <a href="/" className="flex items-center">
-                            {/* <img src="" className="mr-3 h-6 sm:h-9" alt="KCAP Logo" /> */}
-                            <span className="self-center text-xl whitespace-nowrap text-white">
-                                KCAP
-                            </span>
-                        </a>
-                        <div className="flex items-center lg:order-2 text-sm">
-                            <a
-                                href="#"
-                                className="text-white focus:ring-4 focus:ring-primary-300 rounded-lg  px-4 lg:px-5 py-2 lg:py-2.5 mr-2"
-                            >
-                                Оставить заявку
-                            </a>
+        <header
+            className={`${
+                small ? "bg-background bg-opacity-90" : ""
+            } w-full fixed top-0 left-0 right-0 transition-all duration-500 z-10`}
+        >
+            <nav
+                className={`  mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 text-white`}
+            >
+                <div className="z-30 py-2.5">
+                    <div className="relative flex items-center justify-between h-16">
+                        <div className="mob_menu absolute inset-y-0 left-0 flex items-center lg:hidden">
                             <button
-                                data-collapse-toggle="mobile-menu-2"
-                                type="button"
-                                className="inline-flex items-center p-2 ml-1 text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                                aria-controls="mobile-menu-2"
-                                aria-expanded="false"
+                                className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none hover:bg-background hover:bg-opacity-70 focus:bg-background focus:bg-opacity-70 transition duration-150 ease-in-out"
+                                aria-label="Main menu"
+                                aria-expanded={openMobileMenu}
+                                onClick={() =>
+                                    setOpenMobileMenu(!openMobileMenu)
+                                }
                             >
-                                <span className="sr-only">Открыть меню</span>
-                                <svg
-                                    className="w-6 h-6"
-                                    //fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        //fill-rule="evenodd"
-                                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                        clipRule="evenodd"
-                                    ></path>
-                                </svg>
-                                <svg
-                                    className="hidden w-6 h-6"
-                                    //fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        //fill-rule="evenodd"
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clipRule="evenodd"
-                                    ></path>
-                                </svg>
+                                {openMobileMenu ? <OpenMenu /> : <ClosedMenu />}
                             </button>
                         </div>
-                        <div
-                            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 text-sm"
-                            id="mobile-menu-2"
-                        >
-                            <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
-                                {pages.map((page) => (
-                                    <li key={page.id}>
-                                        <a
-                                            href={page.path}
-                                            className="block py-2 pr-4 pl-3 rounded lg:p-0 text-white"
-                                            aria-current="page"
-                                        >
-                                            {page.name}
-                                        </a>
-                                    </li>
+                        <div className="logo flex justify-center w-full lg:w-fit lg:justify-start">
+                            <div className="flex-shrink-0 lg:mt-2 md:mt-2">
+                                <a href="/">KCAP LOGO</a>
+                            </div>
+                        </div>
+                        <div className="links hidden lg:block lg:ml-6">
+                            <div className="flex">
+                                {pages.map(({ path, name, id }) => (
+                                    <a
+                                        href={path}
+                                        className="px-3 py-2 rounded-md text-sm font-medium leading-5 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+                                        key={id}
+                                    >
+                                        {name}
+                                    </a>
                                 ))}
-                            </ul>
+                            </div>
+                        </div>
+                        <div className="link-call absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
+                            <a
+                                href=""
+                                className="inline-flex px-3 py-2 gap-4 rounded-md text-sm font-medium leading-5 focus:outline-none focus:text-white transition duration-150 ease-in-out"
+                            >
+                                <span className="hidden lg:block">
+                                    Оставить заявку
+                                </span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    className="w-5 h-5 block lg:hidden"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                                    />
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                </nav>
-            </header>
-        </>
+                </div>
+
+                {openMobileMenu && (
+                    <div className="lg:hidden block">
+                        <div className="px-2 pt-2 pb-3 bg-background bg-opacity-70 rounded-lg w-fit">
+                            {pages.map(({ path, name, id }) => (
+                                <a
+                                    href={path}
+                                    className="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+                                    key={id}
+                                >
+                                    {name}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </nav>
+        </header>
     );
 }

@@ -3,7 +3,7 @@ import InitProducts from "./components/InitProducts";
 
 export default function Products() {
     return (
-        <div className="purchase text-white pt-">
+        <div className="products text-white pt-">
             <InitProducts />
             <AboutProduct />
         </div>
