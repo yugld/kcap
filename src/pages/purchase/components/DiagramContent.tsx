@@ -3,7 +3,7 @@ import Diagram from "./Diagram";
 export default function DiagramContent() {
     return (
         <section className="diagramContent">
-            <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 space-y-16 py-24 pt-[100px]">
+            <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 space-y-16 py-8">
                 <div className="flex flex-col lg:flex-row items-center lg:justify-between space-y-12 lg:gap-16">
                     <div className="w-full space-y-8 mt-8 lg:w-1/2 ">
                         <div className="text space-y-4">

@@ -1,5 +1,5 @@
 import AboutHome from "./components/AboutHome";
-import MainSwiper from "./components/MainSwiper";
+import MainSwiper from "./components/mainSwiper/MainSwiper";
 import OurProducts from "./components/OurProducts.tsx/OurProduct";
 
 export default function Home() {

@@ -27,7 +27,7 @@ const types = [
 
 export default function AboutProduct() {
     return (
-        <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 py-6">
+        <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 py-16">
             <div className="flex flex-col justify-between space-y-8 ">
                 <h2 className="text-xl uppercase border-b border-primary w-fit">
                     Латунь в слитках

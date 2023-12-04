@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/pages/home/components/MainSwiper.tsx"],
+  "include": ["src", "src/pages/home/components/mainSwiper/MainSwiper.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

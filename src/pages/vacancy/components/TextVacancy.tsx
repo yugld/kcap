@@ -1,7 +1,9 @@
+import FormVacancy from "./FormVacancy";
+
 export default function TextVacancy() {
     return (
         <div className="flex flex-col lg:flex-row lg:justify-between space-y-12 lg:gap-16">
-            <div className="headline flex flex-col justify-center gap-6 w-full lg:w-1/2">
+            <div className="headline flex flex-col justify-center gap-6 w-full lg:w-2/3">
                 <h2 className="text-lg leading-snug font-bold italic">
                     Вам работа! ⭐
                 </h2>
@@ -32,13 +34,7 @@ export default function TextVacancy() {
                     </p>
                 </div>
             </div>
-            <div className="hidden lg:flex w-full lg:w-1/3">
-                <img
-                    className="img h-full object-cover rounded-full"
-                    src="/wp-content/themes/init/img/images/vacancies/vacancies1.jpg"
-                    alt=""
-                ></img>
-            </div>
+            <FormVacancy />
         </div>
     );
 }

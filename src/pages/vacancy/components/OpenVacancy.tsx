@@ -14,7 +14,7 @@ export default function OpenVacancy() {
                     <a
                         href={vacancy.href}
                         target="_blank"
-                        className="text-lg text-primary cursor-pointer border-b border-primary hover:text-hover hover:border-hover"
+                        className="text-lg text-primary cursor-pointer border-b border-primary hover:text-white hover:border-white"
                     >
                         {vacancy.title}
                     </a>
