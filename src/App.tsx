@@ -9,6 +9,7 @@ import About from "./pages/about/About";
 import Purchase from "./pages/purchase/Purchase";
 import Products from "./pages/products/Products";
 import Vacancy from "./pages/vacancy/Vacancy";
+import Contacts from "./pages/contacts/Contacts";
 
 export default function App() {
     return (
@@ -21,6 +22,7 @@ export default function App() {
                 <Route path="/purchase" element={<Purchase />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/vacancy" element={<Vacancy />} />
+                <Route path="/contacts" element={<Contacts />} />
             </Routes>
             <Footer />
         </div>

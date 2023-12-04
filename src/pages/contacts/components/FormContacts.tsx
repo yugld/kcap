@@ -1,13 +1,12 @@
-import Input from "../../../components/input/Input";
-
-import FormAction from "../../../components/formAction/FormAction";
 import { useState } from "react";
-import { fields } from "./data";
+import Input from "../../../components/input/Input";
+import FormAction from "../../../components/formAction/FormAction";
+import { fields } from "./dataContacts";
 
 let fieldsState: { [key: string]: string } = {};
 fields.forEach((field) => (fieldsState[field.id] = ""));
 
-const FormVacancy: React.FC = () => {
+const FormContacts: React.FC = () => {
     const [formState, setFormState] = useState(fieldsState);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,9 +35,9 @@ const FormVacancy: React.FC = () => {
                     />
                 ))}
             </div>
-            <FormAction handleSubmit={handleSubmit} text="Отправить отклик" />
+            <FormAction handleSubmit={handleSubmit} text="Отправить" />
         </form>
     );
 };
 
-export default FormVacancy;
+export default FormContacts;
