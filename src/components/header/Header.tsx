@@ -1,34 +1,7 @@
 import { useEffect, useState } from "react";
 import OpenMenu from "./OpenMenu";
 import ClosedMenu from "./closedMenu";
-
-export const pages = [
-    {
-        name: "Главная",
-        path: "/",
-        id: 1,
-    },
-    {
-        name: "О компании",
-        path: "/about",
-        id: 2,
-    },
-    {
-        name: "Продукция",
-        path: "/products",
-        id: 3,
-    },
-    {
-        name: "Закупки",
-        path: "/purchase",
-        id: 4,
-    },
-    {
-        name: "Вакансии",
-        path: "/vacancy",
-        id: 5,
-    },
-];
+import { pages } from "./dataHeader";
 
 export default function Header() {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
