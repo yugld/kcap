@@ -49,12 +49,6 @@ export default function MainSwiper() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            {/* <div className="absolute flex flex-col text-white z-10 right-0 top-1/2 left-1/2 transform -translate-x-[95%] translate-y-1/2">
-                <h1 className="text-2xl font-bold">KCAP</h1>
-                <span className="text-xl">
-                    KCAP KAZAKHSTAN COPPER ALLOYS PLANT
-                </span>
-            </div> */}
         </div>
     );
 }
