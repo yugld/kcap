@@ -1,0 +1,160 @@
+import { Instagram, WhatsApp } from "@mui/icons-material";
+
+export const footerLinks = [
+    {
+        title: "О компании",
+        id: 2,
+        subtitles: [
+            {
+                name: "Алматинская область, село Мухаметжан Туймебаев, Участок Промзона, здание 260",
+                path: "https://go.2gis.com/wq77k5",
+                id: 1,
+            },
+            {
+                name: "info@kcap.kz",
+                path: "mailto:info@kcap.kz",
+                id: 2,
+            },
+            {
+                name: "+7 778 764 7807",
+                path: "https://kcap.kz/contacts/tel:+77787647807",
+                id: 3,
+            },
+        ],
+    },
+    {
+        title: "Навигация",
+        id: 1,
+        subtitles: [
+            {
+                name: "Главная",
+                path: "/",
+                id: 1,
+            },
+            {
+                name: "О компании",
+                path: "/about",
+                id: 2,
+            },
+            {
+                name: "Продукция",
+                path: "/products",
+                id: 3,
+            },
+            {
+                name: "Закупки",
+                path: "/purchase",
+                id: 4,
+            },
+            {
+                name: "Вакансии",
+                path: "/vacancy",
+                id: 5,
+            },
+        ],
+    },
+];
+
+export default function Footer() {
+    return (
+        <footer className="text-white">
+            <div className="space-y-8 py-8 lg:space-y-8 container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3">
+                <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-16 pb-8 border-b border-gray-400">
+                    <div className="">
+                        <div className="">KCAP</div>
+                        <p className="mt-4 max-w-xs">
+                            Kazakhstan copper alloys plant
+                        </p>
+
+                        <ul className="mt-8 flex gap-6">
+                            <li>
+                                <a
+                                    href="/"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                    className="transition hover:opacity-75 hover:text-primary text-gray-200"
+                                >
+                                    <span className="sr-only">Instagram</span>
+
+                                    <Instagram />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="/"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                    className="transition hover:opacity-75 text-gray-200 hover:text-primary"
+                                >
+                                    <span className="sr-only">WhatsApp</span>
+
+                                    <WhatsApp />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="flex flex-col lg:flex-row gap-8 justify-between">
+                        {footerLinks.map((links) => (
+                            <div
+                                key={links.id}
+                                className={links.id === 1 ? "" : "w-1/2"}
+                            >
+                                <p className="font-medium">{links.title}</p>
+
+                                <ul className="mt-6 space-y-4 text-sm">
+                                    {links.subtitles.map(
+                                        ({ path, name, id }) => (
+                                            <li key={id} className="">
+                                                <a
+                                                    href={path}
+                                                    className="transition hover:opacity-75 text-gray-200"
+                                                >
+                                                    {name}
+                                                </a>
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="flex flex-col md:flex-row justify-between lg:items-center gap-8">
+                    <p className="text-xs text-gray-400">
+                        Официальный сайт ТОО "KЗМС" 2023
+                    </p>
+                    <a
+                        className="footer__dev flex flex-row shrink-0 text-right space-x-2 group"
+                        href="https://init.kz/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div className="flex justify-between items-center text-xs text-gray-400 group-hover:text-primary">
+                            Разработка сайтов<br></br>Веб-студия
+                        </div>
+                        <div className="flex justify-between items-center">
+                            <svg
+                                className="footer__logo fill-gray-500 group-hover:fill-primary h-10"
+                                style={{
+                                    shapeRendering: "geometricPrecision",
+                                    textRendering: "geometricPrecision",
+                                    fillRule: "evenodd",
+                                    clipRule: "evenodd",
+                                }}
+                                viewBox="0 0 5813.82 4168.45"
+                            >
+                                <defs></defs>
+                                <g id="Слой_x0020_1">
+                                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                    <path d="M156.71 0l5657.11 0 0 4168.45 -5813.82 0 0 -4168.45 156.71 0zm5343.7 313.41l-5186.99 0 0 3541.62 5186.99 0 0 -3541.62z"></path>
+                                    <path d="M1524.51 1185.97l0 300.25 -355.29 0 0 -300.25 355.29 0zm0 490.41l0 1291.08 -355.29 0 0 -1291.08 355.29 0zm1496.25 1291.08l-360.3 0 0 -753.13c0,-91.74 -15.01,-161.38 -45.04,-208.92 -30.02,-47.54 -88.41,-71.31 -175.14,-71.31 -186.82,0 -280.24,113.43 -280.24,340.29l0 693.08 -352.79 0 0 -1291.08 337.78 0 0 180.14c106.75,-143.45 249.37,-215.17 427.85,-215.17 138.46,0 247.71,40.03 327.78,120.1 80.06,80.07 120.1,194.33 120.1,342.78l0 863.23zm633.03 -1781.49l0 300.25 -355.29 0 0 -300.25 355.29 0zm0 490.41l0 1291.08 -355.29 0 0 -1291.08 355.29 0zm990.83 0l0 240.2 -262.72 0 0 608c0,38.37 0.84,66.31 2.51,83.82 1.66,17.52 7.51,35.45 17.51,53.79 10.01,18.35 25.44,30.44 46.3,36.28 20.85,5.84 50.45,8.76 88.82,8.76 43.37,0 79.23,-1.67 107.59,-5.01l0 270.23c-86.74,6.67 -158.47,10.01 -215.18,10.01 -155.13,0 -260.62,-27.11 -316.51,-81.33 -55.88,-54.2 -83.81,-158.87 -83.81,-314.01l0 -670.56 -215.18 0 0 -240.2 215.18 0 0 -390.33 352.79 0 0 390.33 262.72 0z"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    );
+}

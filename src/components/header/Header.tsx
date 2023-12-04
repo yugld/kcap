@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import OpenMenu from "./OpenMenu";
-import ClosedMenu from "./closedMenu";
+import ClosedMenu from "./ClosedMenu";
 import { pages } from "./dataHeader";
 
 export default function Header() {
@@ -22,7 +22,7 @@ export default function Header() {
             } w-full fixed top-0 left-0 right-0 transition-all duration-500 z-10`}
         >
             <nav
-                className={`  mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 text-white`}
+                className={`container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 text-white`}
             >
                 <div className="z-30 py-2.5">
                     <div className="relative flex items-center justify-between h-16">
