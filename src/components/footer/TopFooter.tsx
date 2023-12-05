@@ -3,7 +3,7 @@ import { footerLinks } from "./dataFooter";
 
 export default function TopFooter() {
     return (
-        <div className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-16 pb-8 border-b border-gray-400">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 pb-8 border-b border-gray-400">
             <div className="">
                 <div className="">KCAP</div>
                 <p className="mt-4 max-w-xs">Kazakhstan copper alloys plant</p>
@@ -34,11 +34,12 @@ export default function TopFooter() {
                     </li>
                 </ul>
             </div>
-            <div className="flex flex-col lg:flex-row gap-8 justify-between">
+            <div className="flex flex-col lg:flex-row gap-8 justify-between lg:max-w-sm">
                 {footerLinks.map((links) => (
                     <div
                         key={links.id}
-                        className={links.id === 1 ? "" : "w-1/2"}
+                        // className={links.id === 1 ? "" : "w-1/2"}
+                        className=""
                     >
                         <p className="font-medium">{links.title}</p>
 
