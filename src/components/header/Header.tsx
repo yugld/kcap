@@ -42,7 +42,14 @@ export default function Header() {
                         </div>
                         <div className="logo flex justify-center w-full lg:w-fit lg:justify-start">
                             <div className="flex-shrink-0 lg:mt-2 md:mt-2">
-                                <a href="/">KCAP LOGO</a>
+                                <a href="/">
+                                    {" "}
+                                    KCAP LOGO
+                                    {/* <img
+                                        className="h-12"
+                                        src="src\assets\img\logo.png"
+                                    ></img> */}
+                                </a>
                             </div>
                         </div>
                         <div className="links hidden lg:block lg:ml-6">

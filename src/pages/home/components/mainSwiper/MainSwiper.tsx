@@ -3,9 +3,6 @@ import { Navigation, Pagination, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { swiperData } from "./swiperData";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 SwiperCore.use([EffectFade, Navigation, Pagination]);
 

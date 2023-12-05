@@ -1,4 +1,4 @@
-import Benefits from "./components/Benefits";
+import Benefits from "./components/benefits/Benefits";
 import Leader from "./components/Leader";
 import Strategy from "./components/Strategy";
 
