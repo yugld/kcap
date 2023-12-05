@@ -72,19 +72,19 @@ export default function Header() {
                         <div className="link-call absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
                             <a
                                 href="/contacts"
-                                className="inline-flex px-3 py-2 gap-4 rounded-md text-sm font-medium leading-5 focus:outline-none focus:text-white transition duration-150 ease-in-out"
+                                className="inline-flex px-3 py-2 gap-4 lg:p-0 rounded-md text-sm font-medium leading-5 focus:outline-none focus:text-white transition duration-150 ease-in-out"
                             >
                                 <span className="hidden lg:block">
                                     Оставить заявку
                                 </span>
-                                <div className="inline-flex items-center justify-center p-3 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-70 focus:bg-black focus:bg-opacity-70 transition duration-150 ease-in-out">
+                                <div className="inline-flex items-center justify-center p-3 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-70 focus:bg-black focus:bg-opacity-70 transition duration-150 ease-in-out lg:hidden">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
                                         stroke="currentColor"
-                                        className="w-5 h-5 block lg:hidden"
+                                        className="w-5 h-5"
                                     >
                                         <path
                                             stroke-linecap="round"
