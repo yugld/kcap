@@ -99,8 +99,8 @@ export default function Header() {
                 </div>
 
                 {openMobileMenu && (
-                    <div className="lg:hidden block">
-                        <div className="px-2 pt-2 pb-3 bg-black bg-opacity-90 rounded-lg w-fit">
+                    <div className="lg:hidden block h-screen absolute top-0 left-0 -z-10">
+                        <div className="flex flex-col justify-center px-2 h-full bg-black bg-opacity-90 rounded-lg w-fit ">
                             {pages.map(({ path, name, id }) => (
                                 <a
                                     href={path}
