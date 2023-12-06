@@ -10,8 +10,8 @@ export default function Home() {
             <MainSwiper />
             <OurCompany />
             <DiagramContent />
-            <OurProducts />
-            <AboutHome />
+            {/* <OurProducts />
+            <AboutHome /> */}
         </div>
     );
 }

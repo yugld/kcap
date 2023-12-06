@@ -2,7 +2,7 @@ import FormVacancy from "./FormVacancy";
 
 export default function TextVacancy() {
     return (
-        <div className="flex flex-col lg:flex-row lg:justify-between space-y-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row lg:justify-between space-y-10 lg:gap-16">
             <div className="headline flex flex-col justify-center gap-6 w-full lg:w-2/3">
                 <h2 className="text-lg leading-snug font-bold italic">
                     Вам работа! ⭐

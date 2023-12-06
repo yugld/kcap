@@ -3,7 +3,7 @@ import TypesBrass from "./components/TypesBrass";
 
 export default function Purchase() {
     return (
-        <div className="purchase text-white pt-[60px] space-y-16">
+        <div className="purchase text-white pt-[60px]">
             <DiagramContent />
             <TypesBrass />
         </div>

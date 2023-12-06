@@ -19,7 +19,7 @@ const points = [
 
 export default function Strategy() {
     return (
-        <div className="flex flex-col justify-between space-y-12">
+        <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 py-16 flex flex-col justify-between space-y-12">
             <h2 className="text-xl uppercase">Стратегия</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-x-16 ">

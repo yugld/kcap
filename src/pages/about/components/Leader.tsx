@@ -1,7 +1,7 @@
 export default function Leader() {
     return (
         <>
-            <div className="flex flex-col lg:flex-row lg:justify-between space-y-12 lg:gap-16">
+            <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 py-16 flex flex-col lg:flex-row lg:justify-between space-y-12 lg:gap-16">
                 <div className="flex w-full lg:w-1/2">
                     <img
                         className="img h-full object-cover rounded-lg"

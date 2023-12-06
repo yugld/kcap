@@ -71,11 +71,7 @@ export default function OurCompany() {
                 </div>
             </div>
 
-            <div className="bg-black text-white py-16">
-                <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 space-y-6">
-                    <ItemsBenefits />
-                </div>
-            </div>
+            <ItemsBenefits />
         </section>
     );
 }

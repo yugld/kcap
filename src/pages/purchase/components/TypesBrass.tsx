@@ -27,7 +27,7 @@ const types = [
 
 export default function TypesBrass() {
     return (
-        <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 space-y-16 py-6">
+        <div className="container mx-auto px-5 lg:px-0 lg:w-4/5 3xl:w-2/3 space-y-16 py-16">
             <div className="flex flex-col justify-between space-y-12 items-center">
                 <h2 className="text-xl uppercase w-2/3 text-center">
                     <span className="text-primary">Виды и сорта</span> лома
