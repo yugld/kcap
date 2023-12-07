@@ -72,7 +72,11 @@ export default function Header() {
                         <div className="link-call absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
                             <a
                                 href="/contacts"
-                                className="inline-flex px-3 py-2 gap-4 lg:p-0 rounded-md text-sm font-medium leading-5 focus:outline-none focus:text-white transition duration-150 ease-in-out"
+                                className={`inline-flex px-3 py-2 gap-4 lg:p-0 rounded-md text-sm font-medium leading-5 focus:outline-none focus:text-white transition duration-150 ease-in-out ${
+                                    location.pathname === "/contacts"
+                                        ? "text-primary font-bold"
+                                        : ""
+                                }`}
                             >
                                 <span className="hidden lg:block">
                                     Оставить заявку
