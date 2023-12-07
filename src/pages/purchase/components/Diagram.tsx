@@ -16,14 +16,17 @@ export default function Diagram() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
-                <Tooltip />
+                <Tooltip
+                    labelClassName="font-bold"
+                    wrapperClassName="bg-black rounded-lg"
+                    contentStyle={{ backgroundColor: "#171717" }}
+                />
                 <Legend />
                 <Line
                     type="monotone"
                     dataKey="Ni"
                     name="Никель"
                     stroke="#8884d8"
-                    activeDot={{ r: 8 }}
                 />
                 <Line
                     type="monotone"
